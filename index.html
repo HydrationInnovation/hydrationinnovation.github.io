@@ -48,7 +48,6 @@
         .sub-logo {
             max-width: 150px;
             height: auto;
-            /* Removed opacity: 0.8; to eliminate shadowing */
             margin-bottom: 20px;
         }
 
@@ -72,24 +71,24 @@
 
         /* Signup Section */
         .signup {
-            background-image: url('powder-explosion.jpg'); /* Use your image filename here */
-            background-size: 120%; /* Increased size to make the image larger */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents tiling */
+            background-image: url('powder-explosion.jpg');
+            background-size: 120%;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 40px;
-            margin: 0 auto 40px; /* Removed border-radius, box-shadow, and adjusted margin */
-            max-width: 500px; /* Keeps the content area width the same */
-            position: relative; /* For overlay if needed */
+            margin: 0 auto 40px;
+            max-width: 500px;
+            position: relative;
         }
 
-        .signup::before { /* Optional overlay for readability */
+        .signup::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
+            background: rgba(0, 0, 0, 0.3);
             z-index: 1;
         }
 
@@ -97,28 +96,37 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             margin-bottom: 20px;
-            color: #fff; /* Changed to white for visibility */
-            position: relative; /* Brings text above overlay */
+            color: #fff;
+            position: relative;
             z-index: 2;
         }
 
         .signup form {
             display: flex;
+            flex-direction: column; /* Stack fields vertically for better mobile compatibility */
             gap: 10px;
-            position: relative; /* Brings form above overlay */
+            position: relative;
             z-index: 2;
+        }
+
+        .signup label {
+            display: none; /* Hide default labels to use placeholder instead */
         }
 
         .signup input[type="email"] {
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
-            flex: 1;
             padding: 12px;
-            border: 2px solid #fff; /* White border for contrast */
+            border: 2px solid #fff;
             border-radius: 5px;
             font-size: 1em;
             color: #333;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%; /* Full width for email input */
+        }
+
+        .signup textarea {
+            display: none; /* Hide the message textarea since we only want email */
         }
 
         .signup button {
@@ -132,6 +140,7 @@
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.3s;
+            width: 100%; /* Full width for button */
         }
 
         .signup button:hover {
@@ -182,21 +191,14 @@
 
         <section class="signup">
             <h2>Join Our Mailing List</h2>
-            <form id="signupForm" onsubmit="return handleSubmit(event)">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Sign Up</button>
+            <form
+              action="https://formspree.io/f/xrbpzbky"
+              method="POST"
+            >
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Send</button>
             </form>
         </section>
     </div>
-
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            const email = event.target.querySelector('input[type="email"]').value;
-            alert(`Thank you for signing up with ${email}!`);
-            event.target.reset();
-            return false;
-        }
-    </script>
 </body>
 </html>
