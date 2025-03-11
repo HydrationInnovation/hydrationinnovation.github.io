@@ -210,7 +210,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <img src="main-logo.png" alt="Main Logo" class="main-logo" loading="lazy">
+            <img src="main-logo.svg" alt="Main Logo" class="main-logo" id="mainLogo" loading="lazy">
         </header>
 
         <section class="content">
@@ -250,5 +250,21 @@
             <a href="#" aria-label="Read our privacy policy">Privacy Policy</a>
         </p>
     </footer>
+
+    <script>
+        // JavaScript to cycle through 9 SVG logo images
+        const logo = document.getElementById('mainLogo');
+        let currentIndex = 0;
+        const totalImages = 9; // 0 to 8 (main-logo.svg to main-logo-8.svg)
+
+        const interval = setInterval(() => {
+            if (currentIndex < totalImages - 1) {
+                currentIndex++;
+                logo.src = `main-logo-${currentIndex}.svg`; // Cycle to next SVG
+            } else {
+                clearInterval(interval); // Stop when reaching main-logo-8.svg
+            }
+        }, 1000); // 1000ms = 1 second
+    </script>
 </body>
 </html>
