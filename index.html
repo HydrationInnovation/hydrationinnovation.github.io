@@ -17,7 +17,7 @@
         body {
             line-height: 1.6;
             color: #fff;
-            background: linear-gradient(135deg, #0097FE 0%, #007ACC 100%);
+            background: #0097FE; /* Changed to solid color, removed gradient */
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
         }
@@ -209,7 +209,7 @@
     </style>
 </head>
 <body>
-    <div class="class="container">
+    <div class="container">
         <header class="header">
             <img src="main-logo.svg" alt="Main Logo" class="main-logo" id="mainLogo" loading="lazy">
         </header>
@@ -218,11 +218,11 @@
             <img src="sub-logo-2-1.png" alt="Sub Logo" class="sub-logo" id="originalSubLogo" loading="lazy">
             <h3>Fresh Drinks On the Go</h3>
             <p>
-                Hydration Innovation makes it easier than ever to mix up your favorite drinks on the go. Our reimagined dispensing lid and pre-formulated pods allow you to enjoy a fresh, delicious beverage anytime, anywhere—no mess, no hassle, through a reusable drink bottle.
+                Hydration Innovation makes it easier than ever to mix up your favorite drinks on the go. Our reimagined dispensing lid and pre-formulated pods allow you to enjoy a fresh, delicious beverage anytime, anywhere—no mess, no hassle.
             </p>
             <h3>Sustainable and High-Quality</h3>
             <p>
-                Our pods are made from 100% recyclable aluminium, which can be recycled over and over, helping cut down on plastic waste. By using powdered or concentrated ingredients instead of pre-mixed beverages in single-use bottles, we also cut down on transport emissions by eliminating the need to ship heavy bottles, mostly made up of water. Plus, our airtight pods keep the ingredients fresh without the need for preservatives or stabilizers. And because you mix your drink right when you’re ready to enjoy it, all the vitamins and minerals stay at their best.
+                Our pods are designed with sustainability in mind—they’re made from 100% recyclable aluminium, which can be recycled infinitely, helping to reduce plastic waste. By using powdered or concentrated ingredients instead of pre-mixed beverages in single-use bottles, we also cut down on transport emissions by eliminating the need to ship heavy bottles, mostly made up of water. Plus, our airtight pods keep the ingredients fresh without the need for preservatives or stabilizers. And because you mix your drink right when you’re ready to enjoy it, all the vitamins and minerals stay at their best.
             </p>
             <h3>Drink Better with Us</h3>
             <p>
@@ -257,21 +257,22 @@
         const logo = document.getElementById('mainLogo');
         const originalSubLogo = document.getElementById('originalSubLogo'); // Reference to the original sub-logo
         let currentIndex = 0;
-        const totalImages = 12; // 0 to 8 (main-logo.svg to main-logo-11.svg)
+        const totalImages = 9; // 0 to 8 (main-logo.svg to main-logo-8.svg)
 
-        const interval = setInterval(() => {
-            if (currentIndex < totalImages - 1) {
-                currentIndex++;
-                logo.src = `main-logo-${currentIndex}.svg`; // Cycle to next SVG
-            } else {
-                clearInterval(interval); // Stop after main-logo-8.svg
-                // Replace main logo with sub-logo
-                logo.src = originalSubLogo.src; // Set to sub-logo-2-1.png
-                logo.alt = 'Sub Logo'; // Update alt text
-                // Optionally adjust width to match sub-logo's original size if needed
-                // logo.style.maxWidth = '300px'; // Uncomment if you want to revert to sub-logo's original size
-            }
-        }, 500); // 1000ms = 1 second
+        // Delay the start of the animation by 2 seconds
+        setTimeout(() => {
+            const interval = setInterval(() => {
+                if (currentIndex < totalImages - 1) {
+                    currentIndex++;
+                    logo.src = `main-logo-${currentIndex}.svg`; // Cycle to next SVG
+                } else {
+                    clearInterval(interval); // Stop after main-logo-8.svg
+                    // Replace main logo with sub-logo
+                    logo.src = originalSubLogo.src; // Set to sub-logo-2-1.png
+                    logo.alt = 'Sub Logo'; // Update alt text
+                }
+            }, 500); // 500ms = 0.5 seconds
+        }, 2000); // 2000ms = 2 seconds delay before starting
     </script>
 </body>
 </html>
