@@ -17,7 +17,7 @@
         body {
             line-height: 1.6;
             color: #fff;
-            background: #0097FE; /* Changed to solid color, removed gradient */
+            background: #0097FE; /* Default blue background */
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
         }
@@ -74,17 +74,20 @@
             color: #fff;
         }
 
-        /* Full-Width Fresh Drinks Section */
-        .fresh-drinks-section {
-            background: #E0F7FA; /* Light aqua blue */
+        /* Combined Section for Fresh Drinks and Sustainable */
+        .combined-section {
+            background: #FFFDE7; /* Pale lemon yellow */
             width: 100vw; /* Full viewport width */
-            position: relative; /* Ensure it breaks out of parent constraints */
+            position: relative;
             left: 50%;
             right: 50%;
             margin-left: -50vw;
             margin-right: -50vw;
+        }
+
+        /* Fresh Drinks Section */
+        .fresh-drinks-section {
             padding: 40px 0; /* Vertical padding for spacing */
-            margin-bottom: 40px; /* Gap below the section */
         }
 
         .fresh-drinks-content {
@@ -98,7 +101,7 @@
             font-weight: 600;
             font-size: 1.5em;
             margin-bottom: 15px;
-            color: #fff; /* Keep white for consistency */
+            color: #F57F17; /* Citrusy yellow-orange for contrast */
         }
 
         .fresh-drinks-content p {
@@ -106,14 +109,14 @@
             font-weight: 400;
             font-size: 1.1em;
             line-height: 1.8;
-            color: #fff; /* Keep white for consistency */
+            color: #333; /* Dark gray for readability */
         }
 
-        /* Full-Width Sustainable Section */
+        /* Sustainable Section */
         .full-width-section {
             background: #E8F5E9; /* Light sustainable green */
             width: 100vw; /* Full viewport width */
-            position: relative; /* Ensure it breaks out of parent constraints */
+            position: relative;
             left: 50%;
             right: 50%;
             margin-left: -50vw;
@@ -280,10 +283,6 @@
                 font-size: 1.2em;
             }
 
-            .fresh-drinks-section {
-                margin-bottom: 30px; /* Slightly smaller gap on mobile */
-            }
-
             .sustainable-section h3 {
                 font-size: 1.2em;
             }
@@ -301,26 +300,29 @@
         </header>
     </div>
 
-    <!-- Full-width Fresh Drinks section -->
-    <section class="fresh-drinks-section">
-        <div class="fresh-drinks-content">
-            <img src="sub-logo-clean.png" alt="Sub Logo" class="sub-logo" id="originalSubLogo" loading="lazy">
-            <h3>Fresh Drinks On the Go</h3>
-            <p>
-                Hydration Innovation makes it easier than ever to mix up your favorite drinks on the go. Our reimagined dispensing lid and pre-formulated pods allow you to enjoy a fresh, delicious beverage anytime, anywhere—no mess, no hassle.
-            </p>
-        </div>
-    </section>
+    <!-- Combined section with pale lemon yellow background -->
+    <div class="combined-section">
+        <!-- Fresh Drinks Section -->
+        <section class="fresh-drinks-section">
+            <div class="fresh-drinks-content">
+                <img src="sub-logo-clean.png" alt="Sub Logo" class="sub-logo" id="originalSubLogo" loading="lazy">
+                <h3>Fresh Drinks On the Go</h3>
+                <p>
+                    Hydration Innovation makes it easier than ever to mix up your favorite drinks on the go. Our reimagined dispensing lid and pre-formulated pods allow you to enjoy a fresh, delicious beverage anytime, anywhere—no mess, no hassle.
+                </p>
+            </div>
+        </section>
 
-    <!-- Full-width Sustainable section -->
-    <section class="full-width-section">
-        <div class="sustainable-section">
-            <h3>Sustainable and High-Quality</h3>
-            <p>
-                Our pods are designed with sustainability in mind—they’re made from 100% recyclable aluminium, which can be recycled infinitely, helping to reduce plastic waste. By using powdered or concentrated ingredients instead of pre-mixed beverages in single-use bottles, we also cut down on transport emissions by eliminating the need to ship heavy bottles, mostly made up of water. Plus, our airtight pods keep the ingredients fresh without the need for preservatives or stabilizers. And because you mix your drink right when you’re ready to enjoy it, all the vitamins and minerals stay at their best.
-            </p>
-        </div>
-    </section>
+        <!-- Sustainable Section -->
+        <section class="full-width-section">
+            <div class="sustainable-section">
+                <h3>Sustainable and High-Quality</h3>
+                <p>
+                    Our pods are designed with sustainability in mind—they’re made from 100% recyclable aluminium, which can be recycled infinitely, helping to reduce plastic waste. By using powdered or concentrated ingredients instead of pre-mixed beverages in single-use bottles, we also cut down on transport emissions by eliminating the need to ship heavy bottles, mostly made up of water. Plus, our airtight pods keep the ingredients fresh without the need for preservatives or stabilizers. And because you mix your drink right when you’re ready to enjoy it, all the vitamins and minerals stay at their best.
+                </p>
+            </div>
+        </section>
+    </div>
 
     <div class="container">
         <section class="content">
