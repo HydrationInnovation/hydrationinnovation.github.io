@@ -248,16 +248,16 @@
             © 2025 Hydration Innovation. All rights reserved. | 
             <a href="#" aria-label="Follow us on Twitter">Twitter</a> | 
             <a href="https://www.instagram.com/hydrationinnovation/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">Instagram</a> | 
-            <a href="#" aria-label="Read our privacy policy">Privacy Policy</a>
+            <a href="privacy-policy.html" aria-label="Read our privacy policy">Privacy Policy</a>
         </p>
     </footer>
 
     <script>
-        // JavaScript to cycle through 9 SVG logo images and switch to sub-logo
+        // JavaScript to cycle through 12 SVG logo images and switch to sub-logo
         const logo = document.getElementById('mainLogo');
         const originalSubLogo = document.getElementById('originalSubLogo'); // Reference to the original sub-logo
         let currentIndex = 0;
-        const totalImages = 12; // 0 to 11 (main-logo.svg to main-logo-8.svg)
+        const totalImages = 12; // 0 to 11 (main-logo.svg to main-logo-11.svg)
 
         // Delay the start of the animation by 2 seconds
         setTimeout(() => {
@@ -266,9 +266,9 @@
                     currentIndex++;
                     logo.src = `main-logo-${currentIndex}.svg`; // Cycle to next SVG
                 } else {
-                    clearInterval(interval); // Stop after main-logo-8.svg
+                    clearInterval(interval); // Stop after main-logo-11.svg
                     // Replace main logo with sub-logo
-                    logo.src = originalSubLogo.src; // Set to Let'sdrinkbetter.svg
+                    logo.src = originalSubLogo.src; // Set to sub-logo-clean.png
                     logo.alt = 'Sub Logo'; // Update alt text
                 }
             }, 500); // 500ms = 0.5 seconds
