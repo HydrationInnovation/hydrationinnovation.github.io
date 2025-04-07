@@ -91,10 +91,12 @@
         }
 
         .fresh-drinks-content {
-            max-width: 800px; /* Match the width of other sections */
-            margin: 0 auto; /* Center the content */
-            padding: 0 20px; /* Horizontal padding for smaller screens */
-            text-align: center; /* Center the text */
+            width: 50%; /* Take up half the viewport width */
+            max-width: 600px; /* Match container width for consistency */
+            margin-left: 0; /* Start from the left */
+            margin-right: auto; /* Push the right edge toward the center */
+            padding: 0 40px 0 40px; /* Padding on left and right */
+            text-align: left; /* Align text to the left */
         }
 
         .fresh-drinks-content h3 {
@@ -127,10 +129,12 @@
         }
 
         .sustainable-section {
-            max-width: 800px; /* Match the width of other sections */
-            margin: 0 auto; /* Center the content */
-            padding: 0 20px; /* Horizontal padding for smaller screens */
-            text-align: center; /* Center the text */
+            width: 50%; /* Take up half the viewport width */
+            max-width: 600px; /* Match container width for consistency */
+            margin-left: auto; /* Push the left edge toward the center */
+            margin-right: 0; /* Start from the right */
+            padding: 0 40px 0 40px; /* Padding on left and right */
+            text-align: right; /* Align text to the right */
         }
 
         .sustainable-section h3 {
@@ -286,9 +290,11 @@
             }
 
             .fresh-drinks-content {
-                max-width: 100%; /* Full width on mobile */
+                width: 100%; /* Full width on mobile */
+                max-width: 100%; /* Override max-width */
                 margin: 0 20px; /* Reduced padding on mobile */
-                text-align: center; /* Already centered */
+                padding: 0 20px; /* Adjust padding */
+                text-align: center; /* Center text on mobile */
             }
 
             .fresh-drinks-content h3 {
@@ -300,9 +306,11 @@
             }
 
             .sustainable-section {
-                max-width: 100%; /* Full width on mobile */
+                width: 100%; /* Full width on mobile */
+                max-width: 100%; /* Override max-width */
                 margin: 0 20px; /* Reduced padding on mobile */
-                text-align: center; /* Already centered */
+                padding: 0 20px; /* Adjust padding */
+                text-align: center; /* Center text on mobile */
             }
 
             .sustainable-section h3 {
