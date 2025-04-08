@@ -93,14 +93,14 @@
         .fresh-drinks-content {
             display: flex; /* Use flexbox to place text and image side by side */
             align-items: center; /* Vertically center the content */
-            max-width: 1200px; /* Match the container width */
-            margin: 0 auto; /* Center the content within the section */
-            padding: 0 40px; /* Padding on left and right */
+            width: 100%; /* Full width of the section */
+            margin-left: 0; /* Start from the far left */
         }
 
         .fresh-drinks-text {
-            width: 75%; /* Text takes up 75% of the container width */
+            width: 75%; /* Text takes up 75% of the viewport width */
             max-width: 900px; /* As previously set */
+            padding: 0 40px; /* Padding on left and right */
             text-align: left; /* Align text to the left */
         }
 
@@ -114,13 +114,6 @@
             width: 100%; /* Make the image responsive */
             height: auto;
             display: block;
-        }
-
-        .fresh-drinks-text .section-icon {
-            display: block;
-            width: 50px; /* Icon size */
-            height: 50px;
-            margin: 0 0 20px; /* Margin below the icon */
         }
 
         .fresh-drinks-text h3 {
@@ -321,6 +314,7 @@
             .fresh-drinks-text {
                 width: 100%; /* Full width on mobile */
                 max-width: 100%; /* Override max-width */
+                padding: 0 20px; /* Adjust padding */
                 text-align: center; /* Center text on mobile */
             }
 
@@ -328,10 +322,6 @@
                 width: 100%; /* Full width on mobile */
                 max-width: 300px; /* Keep the image size reasonable */
                 margin: 20px auto 0; /* Center the image with margin on top */
-            }
-
-            .fresh-drinks-text .section-icon {
-                margin: 0 auto 20px; /* Center the icon on mobile */
             }
 
             .fresh-drinks-text h3 {
@@ -378,7 +368,6 @@
             <div class="fresh-drinks-content">
                 <div class="fresh-drinks-text">
                     <img src="sub-logo-clean.png" alt="Sub Logo" class="sub-logo" id="originalSubLogo" loading="lazy">
-                    <img src="drink-pod-icon.png" alt="Drink Pod Icon" class="section-icon" loading="lazy">
                     <h3>Fresh Drinks On the Go</h3>
                     <p>
                         Hydration Innovation makes it easier than ever to mix up your favorite drinks on the go. Our reimagined dispensing lid and pre-formulated pods allow you to enjoy a fresh, delicious beverage anytime, anywhere—no mess, no hassle.
