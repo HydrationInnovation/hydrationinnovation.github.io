@@ -74,7 +74,7 @@
             color: #fff;
         }
 
-        /* Combined Section for Fresh Drinks and Sustainable */
+        /* Combined Section for Fresh Drinks, Sustainable, and Health */
         .combined-section {
             background: #FFFDE7; /* Pale lemon yellow */
             width: 100vw; /* Full viewport width */
@@ -106,7 +106,7 @@
 
         .fresh-drinks-image {
             width: 25%; /* Image takes up the remaining 25% */
-            max-width: 600px; /* Increased by 50% from 300px */
+            max-width: 900px; /* As previously set */
             display: flex; /* Use flexbox to center the image within this container */
             justify-content: center; /* Center horizontally within the 25% space */
         }
@@ -143,7 +143,7 @@
             margin-left: -50vw;
             margin-right: -50vw;
             padding: 40px 0; /* Vertical padding for spacing */
-            margin-bottom: 60px; /* Increased gap below the section */
+            margin-bottom: 0; /* Remove bottom margin to avoid extra gap */
         }
 
         .sustainable-section {
@@ -169,6 +169,62 @@
             font-size: 1.5em;
             line-height: 1.8;
             color: #27AE60; /* Sustainable green for the paragraph */
+        }
+
+        /* Health Advantages Section */
+        .health-section {
+            background: #E3F2FD; /* Soft, calming blue for health */
+            width: 100vw; /* Full viewport width */
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding: 40px 0; /* Vertical padding for spacing */
+            margin-bottom: 60px; /* Match the gap below Sustainable section */
+        }
+
+        .health-content {
+            display: flex; /* Use flexbox to place text and image side by side */
+            align-items: center; /* Vertically center the content */
+            width: 100%; /* Full width of the section */
+            margin-left: 0; /* Start from the far left */
+        }
+
+        .health-text {
+            width: 75%; /* Text takes up 75% of the viewport width */
+            max-width: 900px; /* Match Fresh Drinks section */
+            padding: 0 40px; /* Padding on left and right */
+            text-align: left; /* Align text to the left */
+        }
+
+        .health-image {
+            width: 25%; /* Image takes up the remaining 25% */
+            max-width: 900px; /* Match Fresh Drinks section */
+            display: flex; /* Use flexbox to center the image within this container */
+            justify-content: center; /* Center horizontally within the 25% space */
+        }
+
+        .health-image img {
+            width: 100%; /* Make the image responsive */
+            height: auto;
+            display: block;
+        }
+
+        .health-text h3 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #0288D1; /* A slightly darker blue to complement the background */
+        }
+
+        .health-text p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1.5em;
+            line-height: 1.8;
+            color: #0288D1; /* Match the title color */
         }
 
         /* Signup Section */
@@ -321,7 +377,7 @@
 
             .fresh-drinks-image {
                 width: 100%; /* Full width on mobile */
-                max-width: 450px; /* Keep the increased size on mobile */
+                max-width: 600px; /* Reduced for mobile */
                 margin: 20px auto 0; /* Center the image with margin on top */
                 display: flex; /* Maintain flexbox for centering */
                 justify-content: center; /* Center the image */
@@ -351,8 +407,40 @@
                 font-size: 1.2em; /* Slightly smaller on mobile */
             }
 
+            .health-content {
+                flex-direction: column; /* Stack text and image on mobile */
+                padding: 0 20px; /* Adjust padding */
+            }
+
+            .health-text {
+                width: 100%; /* Full width on mobile */
+                max-width: 100%; /* Override max-width */
+                padding: 0 20px; /* Adjust padding */
+                text-align: center; /* Center text on mobile */
+            }
+
+            .health-image {
+                width: 100%; /* Full width on mobile */
+                max-width: 600px; /* Reduced for mobile */
+                margin: 20px auto 0; /* Center the image with margin on top */
+                display: flex; /* Maintain flexbox for centering */
+                justify-content: center; /* Center the image */
+            }
+
+            .health-text h3 {
+                font-size: 1.6em; /* Slightly smaller on mobile */
+            }
+
+            .health-text p {
+                font-size: 1.2em; /* Slightly smaller on mobile */
+            }
+
             .full-width-section {
-                margin-bottom: 40px; /* Slightly smaller gap on mobile */
+                margin-bottom: 0; /* Remove extra gap on mobile */
+            }
+
+            .health-section {
+                margin-bottom: 40px; /* Match the gap below Sustainable section on mobile */
             }
         }
     </style>
@@ -389,6 +477,21 @@
                 <p>
                     Our pods are designed with sustainability in mind—they’re made from 100% recyclable aluminium, which can be recycled infinitely, helping to reduce plastic waste. By using powdered or concentrated ingredients instead of pre-mixed beverages in single-use bottles, we also cut down on transport emissions by eliminating the need to ship heavy bottles, mostly made up of water. Plus, our airtight pods keep the ingredients fresh without the need for preservatives or stabilizers. And because you mix your drink right when you’re ready to enjoy it, all the vitamins and minerals stay at their best.
                 </p>
+            </div>
+        </section>
+
+        <!-- Health Advantages Section -->
+        <section class="health-section">
+            <div class="health-content">
+                <div class="health-text">
+                    <h3>Healthier Hydration with Every Sip</h3>
+                    <p>
+                        Our pods are crafted to support your wellness with every sip. By mixing your drink fresh, you get the full potency of vitamins and minerals without degradation. We use no artificial preservatives or stabilizers, ensuring a pure, clean beverage. Plus, our concentrated formulas allow you to control the intensity, so you can hydrate your way—naturally and healthily.
+                    </p>
+                </div>
+                <div class="health-image">
+                    <img src="health-benefits.svg" alt="Health Benefits Illustration" loading="lazy">
+                </div>
             </div>
         </section>
     </div>
