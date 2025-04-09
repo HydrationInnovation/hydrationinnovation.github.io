@@ -105,14 +105,15 @@
 
         .fresh-drinks-image {
             width: 25%; /* Image takes up the remaining 25% */
-            max-width: 300px; /* Reduced for better image sizing */
+            padding-left: 20px; /* Add padding to control spacing between text and image */
             display: flex; /* Use flexbox to center the image within this container */
             justify-content: center; /* Center horizontally within the 25% space */
             align-items: center; /* Center vertically within the container */
+            min-height: 200px; /* Ensure consistent height for vertical centering */
         }
 
         .fresh-drinks-image img {
-            width: 100%; /* Make the image responsive */
+            width: 60%; /* Image takes up 60% of the 25% container */
             height: auto;
             display: block;
         }
@@ -154,14 +155,15 @@
 
         .sustainable-image {
             width: 25%; /* Image takes up the left 25% */
-            max-width: 300px; /* Match Fresh Drinks section */
+            padding-right: 20px; /* Add padding to control spacing between image and text */
             display: flex; /* Use flexbox to center the image within this container */
             justify-content: center; /* Center horizontally within the 25% space */
             align-items: center; /* Center vertically within the container */
+            min-height: 200px; /* Ensure consistent height for vertical centering */
         }
 
         .sustainable-image img {
-            width: 100%; /* Make the image responsive */
+            width: 60%; /* Image takes up 60% of the 25% container */
             height: auto;
             display: block;
         }
@@ -219,14 +221,15 @@
 
         .health-image {
             width: 25%; /* Image takes up the remaining 25% */
-            max-width: 300px; /* Match Fresh Drinks section */
+            padding-left: 20px; /* Add padding to control spacing between text and image */
             display: flex; /* Use flexbox to center the image within this container */
             justify-content: center; /* Center horizontally within the 25% space */
             align-items: center; /* Center vertically within the container */
+            min-height: 200px; /* Ensure consistent height for vertical centering */
         }
 
         .health-image img {
-            width: 100%; /* Make the image responsive */
+            width: 60%; /* Image takes up 60% of the 25% container */
             height: auto;
             display: block;
         }
@@ -397,11 +400,17 @@
 
             .fresh-drinks-image {
                 width: 100%; /* Full width on mobile */
-                max-width: 600px; /* Reduced for mobile */
+                padding: 0; /* Remove padding on mobile */
                 margin: 20px auto 0; /* Center the image with margin on top */
                 display: flex; /* Maintain flexbox for centering */
                 justify-content: center; /* Center the image */
                 align-items: center; /* Ensure vertical centering */
+                min-height: 0; /* Remove min-height on mobile */
+            }
+
+            .fresh-drinks-image img {
+                width: 60%; /* Adjust for mobile */
+                max-width: 300px; /* Ensure image doesn’t get too large */
             }
 
             .fresh-drinks-text h3 {
@@ -419,11 +428,17 @@
 
             .sustainable-image {
                 width: 100%; /* Full width on mobile */
-                max-width: 600px; /* Reduced for mobile */
+                padding: 0; /* Remove padding on mobile */
                 margin: 0 auto 20px; /* Center the image with margin below */
                 display: flex; /* Maintain flexbox for centering */
                 justify-content: center; /* Center the image */
                 align-items: center; /* Ensure vertical centering */
+                min-height: 0; /* Remove min-height on mobile */
+            }
+
+            .sustainable-image img {
+                width: 60%; /* Adjust for mobile */
+                max-width: 300px; /* Ensure image doesn’t get too large */
             }
 
             .sustainable-section {
@@ -456,11 +471,17 @@
 
             .health-image {
                 width: 100%; /* Full width on mobile */
-                max-width: 600px; /* Reduced for mobile */
+                padding: 0; /* Remove padding on mobile */
                 margin: 20px auto 0; /* Center the image with margin on top */
                 display: flex; /* Maintain flexbox for centering */
                 justify-content: center; /* Center the image */
                 align-items: center; /* Ensure vertical centering */
+                min-height: 0; /* Remove min-height on mobile */
+            }
+
+            .health-image img {
+                width: 60%; /* Adjust for mobile */
+                max-width: 300px; /* Ensure image doesn’t get too large */
             }
 
             .health-text h3 {
